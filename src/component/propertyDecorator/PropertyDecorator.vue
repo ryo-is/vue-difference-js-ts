@@ -1,12 +1,12 @@
 <template lang="pug">
-  .ts-component
+  .property-decorator
 </template>
 
 <script lang="ts">
 import { Component, Vue, Prop, Watch } from "vue-property-decorator"
 
 @Component({})
-export default class TsComponent extends Vue {
+export default class PropertyDecorator extends Vue {
   @Prop({ default: "" })
   public val!: string
 
@@ -23,16 +23,16 @@ export default class TsComponent extends Vue {
     console.log("TsComponent: Created!")
   }
 
-  private mounted() {
-    console.log("TsComponent: Mounted!")
-  }
-
   get isEnabled(): boolean {
     return this.enable
   }
 
-  public countUp() {
+  public countUp(): void {
     this.count += 1
+  }
+
+  public getValue(): string {
+    return this.value
   }
 }
 </script>
