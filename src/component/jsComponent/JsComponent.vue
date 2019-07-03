@@ -24,10 +24,6 @@ export default {
     console.log("JsComponent: Created!")
   },
 
-  mounted() {
-    console.log("JsComponent: Mounted!")
-  },
-
   computed: {
     isEnabled() {
       return this.enable
@@ -45,5 +41,3 @@ export default {
 <style lang="scss">
 
 </style>
-
-

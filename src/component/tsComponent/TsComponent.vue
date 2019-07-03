@@ -7,7 +7,8 @@ import { Component, Vue, Prop, Watch } from "vue-property-decorator"
 
 @Component({})
 export default class TsComponent extends Vue {
-  @Prop() public val!: string
+  @Prop({ default: "" })
+  public val!: string
 
   @Watch("value")
   public onChangeValue(newValue: string, oldValue: string) {
