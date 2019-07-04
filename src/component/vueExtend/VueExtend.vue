@@ -1,20 +1,10 @@
 <template lang="pug">
-  .vue-extend
+  .vue-extend Vue Extend Patttern
 </template>
 
 <script lang="ts">
 import Vue, { PropType } from "vue"
-
-type DataType = {
-  value: string
-  enable: boolean
-  count: number
-}
-
-type PropObjType = {
-  id: string
-  index: number
-}
+import { DataType, PropObjType } from "@/types"
 
 export default Vue.extend({
   props: {
@@ -23,7 +13,7 @@ export default Vue.extend({
   },
 
   watch: {
-    value(newValue: string, oldValue: string) {
+    value(newValue: string, oldValue: string): void {
       console.log(newValue, oldValue)
     }
   },
@@ -36,8 +26,8 @@ export default Vue.extend({
     }
   },
 
-  created() {
-    console.log("JsComponent: Created!")
+  created(): void {
+    console.log("VueExtend: Created!")
   },
 
   computed: {
@@ -47,7 +37,7 @@ export default Vue.extend({
   },
 
   methods: {
-    countUp() {
+    countUp(): void {
       this.count += 1
     }
   }

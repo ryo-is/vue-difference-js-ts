@@ -4,11 +4,7 @@
 
 <script lang="ts">
 import { Component, Vue, Prop, Watch, Provide } from "vue-property-decorator"
-
-type PropObjType = {
-  id: string
-  index: number
-}
+import { PropObjType } from "@/types"
 
 @Component({})
 export default class PropertyDecorator extends Vue {
@@ -19,7 +15,7 @@ export default class PropertyDecorator extends Vue {
   public obj!: PropObjType
 
   @Watch("value")
-  public onChangeValue(newValue: string, oldValue: string) {
+  public onChangeValue(newValue: string, oldValue: string): void {
     console.log(newValue, oldValue)
   }
 
@@ -27,8 +23,9 @@ export default class PropertyDecorator extends Vue {
   public enable: boolean = true
   public count: number = 0
 
-  private created() {
-    console.log("TsComponent: Created!")
+  private created(): void {
+    console.log("PropertyDecorator: Created!")
+    console.log(this.val, this.obj)
   }
 
   get isEnabled(): boolean {
