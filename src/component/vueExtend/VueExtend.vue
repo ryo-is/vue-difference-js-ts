@@ -1,5 +1,5 @@
 <template lang="pug">
-  .vue-extend Vue Extend Patttern
+  .vue-extend Vue Extend Pattern
 </template>
 
 <script lang="ts">

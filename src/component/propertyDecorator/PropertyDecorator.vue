@@ -1,5 +1,5 @@
 <template lang="pug">
-  .property-decorator
+  .property-decorator Property Decorator Pattern
 </template>
 
 <script lang="ts">

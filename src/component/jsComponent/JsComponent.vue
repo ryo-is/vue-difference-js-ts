@@ -1,5 +1,5 @@
 <template lang="pug">
-  .js-component JavaScript Patttern
+  .js-component JavaScript Pattern
 </template>
 
 <script>
