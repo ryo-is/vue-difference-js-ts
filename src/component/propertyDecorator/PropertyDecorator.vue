@@ -3,12 +3,20 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop, Watch } from "vue-property-decorator"
+import { Component, Vue, Prop, Watch, Provide } from "vue-property-decorator"
+
+type PropObjType = {
+  id: string
+  index: number
+}
 
 @Component({})
 export default class PropertyDecorator extends Vue {
   @Prop({ default: "" })
   public val!: string
+
+  @Prop({ default: { id: "", index: null} })
+  public obj!: PropObjType
 
   @Watch("value")
   public onChangeValue(newValue: string, oldValue: string) {

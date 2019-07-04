@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  props: ["val"],
+  props: ["val", "obj"],
 
   watch: {
     value(newValue, oldValue) {
