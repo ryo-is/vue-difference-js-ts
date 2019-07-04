@@ -33,12 +33,18 @@ export default Vue.extend({
   computed: {
     isEnabled(): boolean {
       return this.enable
+    },
+    getCount(): number {
+      return this.count
     }
   },
 
   methods: {
     countUp(): void {
       this.count += 1
+    },
+    getValue(): string {
+      return this.value
     }
   }
 })
