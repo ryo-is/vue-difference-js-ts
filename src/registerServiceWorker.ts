@@ -1,4 +1,5 @@
 /* tslint:disable:no-console */
+/* tslint:disable:typedef */
 
 import { register } from "register-service-worker";
 
